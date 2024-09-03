@@ -1,0 +1,146 @@
+.carousel-item {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    width: 200px; /* Adjust width as needed */
+    height: auto; /* Ensure height adjusts automatically */
+  }
+  
+  .favourite-button {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    border: 2px solid #e74c3c;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #e74c3c;
+    transition: background 0.3s, transform 0.2s;
+    position: absolute; /* Ensure it's positioned correctly */
+    top: 10px; /* Adjust position as needed */
+    right: 10px; /* Adjust position as needed */
+  }
+  
+  .favourite-button:hover {
+    background: #e74c3c;
+    color: #fff;
+    transform: scale(1.1);
+  }
+  
+  .favourite-button.active {
+    color: red;
+  }
+  
+  .heart-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .heart-icon.favorited {
+    color: red;
+  }
+  
+  .carousel {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  
+  .carousel-item {
+    margin-right: 15px;
+  }
+  
+  .carousel-item img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .form-select {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+  }
+  
+  .movie-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .movie-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 1rem;
+    border-radius: 0.25rem;
+  }
+  
+  .movie-item p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .favorite-btn {
+    margin-left: auto;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .favorite-btn.active {
+    background-color: #dc3545;
+  }
+  
+  #movieDisplayContainer, #favoritesContainer {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  #movieDisplayContainer.hidden, #favoritesContainer.hidden {
+    opacity: 0;
+    display: none;
+  }
+  
+  #movieDisplayContainer.visible, #favoritesContainer.visible {
+    opacity: 1;
+    display: block;
+  }
+  .hidden {
+    display: hidden;
+  }
+  
+  .visible {
+    display: block;
+  }
