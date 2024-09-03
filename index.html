@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Favorites</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Progress Bar -->
+    <div id="progressBar" class="progress-bar-top" style="transition: width 1s ease;"></div>
+
+    <!-- Movie Selection -->
+    <h2 class="text-center mt-5">Select a Movie</h2>
+    <select id="movieCategorySelect" class="form-select form-select-lg my-1 mx-auto"
+        aria-label="Select a movie category" style="width: 300px;">
+        <option value="scaryMovies">Scary Movies</option>
+        <option value="familyMovies">Family Movies</option>
+        <option value="kidsMovies">Kids Movies</option>
+    </select>
+
+    <button id="getFavouritesBtn" class="btn btn-success mx-auto d-block mt-3 mb-5">Get Favorites</button>
+
+    <!-- Movie Details -->
+    <div id="infoDump" class="text-center mt-5">
+        <!-- Movie details will be displayed here -->
+    </div>
+
+    <!-- Movie Display Container -->
+    <div id="movieDisplayContainer" class="container mt-4">
+        <!-- Movies will be dynamically inserted here -->
+    </div>
+
+    <!-- Favorites Display Container -->
+    <div id="favoritesContainer" class="container mt-4" style="display: none;">
+        <!-- Back to Movies button -->
+        <button id="backToMoviesBtn" class="btn btn-secondary mx-auto d-block mb-3">Back to Movies</button>
+
+        <!-- Carousel -->
+        <div id="carouselExampleControls" class="carousel slide">
+            <div id="carouselInner" class="carousel-inner">
+                <!-- Carousel items will be inserted here -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <template id="carouselItemTemplate">
+        <div class="carousel-item">
+            <img src="" alt="" class="d-block w-100">
+            <button class="favourite-button btn btn-danger">&#10084;</button>
+        </div>
+    </template>
+
+    <!-- Custom Scripts -->
+    <script src="alternative.js" type="module"></script>
+</body>
+
+</html>
